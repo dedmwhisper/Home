@@ -9,12 +9,10 @@ html * {
   box-sizing: border-box;
 }
 *{
-	border: 1px solid #333333;
+  transition: 0.25s;
 }
 
 body {
-  
-  font-size: 100%;
   font-family: 'Noto Sans TC', sans-serif;
 }
 
@@ -46,6 +44,11 @@ img {
   top: 15px;
   left: 25px;
 }
+.navecontent{
+visibility: hidden;
+transition: 0.5s;
+display: none;
+}
 .sidenav {
   height: 100%;
   width: 0; 
@@ -54,7 +57,7 @@ img {
   top: 0;
   left: 0;
   background-color: #111; 
-  overflow-x: hidden; 
+  overflow: hidden; 
   padding-top: 5px; 
   transition: 0.5s; 
 }
@@ -77,10 +80,42 @@ z-index: 999;
   font-size: 36px;
   margin-left: 50px;
 }
-#main {
-  transition: margin-left .5s;
-  padding: 20px;
+.profile{
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 1%;
+  transition: 0.3s ease-in-out;
+  color: #fff;
 }
+.profilepic{
+  cursor: pointer;
+  filter:brightness(.5);
+}
+.profilepic:hover ~ span.protext{
+  margin-top: 180px;
+}
+.profilepic:hover{
+  filter:brightness(1);
+  transform: rotate(-15deg);
+}
+.protext{
+  cursor: pointer;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  font-size: 3vmax;
+  font-weight: 900;
+  /* color: #fff; */
+}
+.protext:hover{
+  display: none;
+}
+span.protext:hover ~ img.profilepic{
+filter: brightness(1);
+}
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -355,6 +390,19 @@ Main components
   right: 30px; /* Place the button 30px from the right */
   z-index: 2; /* Make sure it does not overlap */
   cursor: pointer;
+}
+#gtp:hover{
+animation: gtp 0.5s ease infinite alternate;
+}
+@keyframes gtp {
+from {
+  transform: translateY(0px);
+  transform: scale(1);
+}
+to {
+  transform: translateY(-8px);
+  transform: scale(1.1);
+}
 }
 
 /* loading */
