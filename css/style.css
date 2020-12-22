@@ -37,12 +37,23 @@ img {
 
 /* 主選單 */
 /* sidemenu */
-.menu{
+.home{
   z-index: 2;
   position: fixed;
   cursor: pointer;
   top: 15px;
   left: 25px;
+}
+.home:hover{
+  transform: scale(1.1);
+  filter: drop-shadow(0px 0px 10px rgb(255,255,255));
+}
+.menu{
+  z-index: 2;
+  position: fixed;
+  cursor: pointer;
+  top: 15px;
+  right: 25px;
 }
 .navecontent{
 visibility: hidden;
@@ -80,7 +91,7 @@ z-index: 999;
   font-size: 36px;
   margin-left: 50px;
 }
-.profile{
+a.profile{
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -107,7 +118,7 @@ z-index: 999;
   position: absolute;
   font-size: 3vmax;
   font-weight: 900;
-  /* color: #fff; */
+  color: #fff;
 }
 .protext:hover{
   display: none;
@@ -377,7 +388,7 @@ Main components
 	background-image: url("../images/bg4.png");
 }
 #section6 {
-	background-image: url("../images/bg1.png");
+	background-image: url("../images/bg5.png");
 }
 #section7 {
 	background-image: url("../images/bg6.png");
