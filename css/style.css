@@ -8,6 +8,9 @@ html * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+a{
+  text-decoration: none;
+}
 *{
   transition: 0.25s;
 }
@@ -20,9 +23,9 @@ body, html {
   /* scroll-behavior: smooth; */
   height: 100%;
 }
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   display: none;
-}
+} */
 .sidenav::-webkit-scrollbar {
   display: none;
 }
@@ -387,18 +390,9 @@ Main components
 .people{
   visibility: hidden;
 }
-.title{
-	position: absolute;
-	font-size: 6vmax;
-	bottom: 10%;
-	right: 120px;
-	color: #F78942;
-	background-color: #000000;
-	font-weight: 600;
-	padding: 3px;
-	padding-bottom: 5px;
-}
-.title2{
+
+a.title2{
+  text-decoration: none;
 	position: absolute;
 	font-size: 6vmax;
 	bottom: 100px;
@@ -406,22 +400,32 @@ Main components
 	color: #F78942;
 	background-color: #000000;
 	font-weight: 600;
-	padding: 3px;
-	padding-bottom: 5px;
+	padding: 5px;
 }
-.vicky_t{
+a.title2:hover{
+  text-decoration: none;
+  font-size: 5vmax;
+  border-radius: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 3px solid #fff;
+  color: #F78942;
+
+}
+a.vicky_t,a.vicky_t:hover{
 	color:#3C7BE2;
 }
-.joy_t{
+a.joy_t,a.joy_t:hover{
 	color:#F55C75;
 }
-.kelly_t{
+a.kelly_t,a.kelly_t:hover{
 	color:#905CB0;
 }
-.emma_t{
+a.emma_t,a.emma_t:hover{
 	color:#5954BC;
 }
-.beryl_t{
+a.beryl_t,a.beryl_t:hover{
 	color: #56C968;
 }
 #section2 {
