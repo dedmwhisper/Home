@@ -93,3 +93,9 @@ root.style.setProperty("--marquee-elements", marqueeContent.children.length);
 for(let i=0; i<marqueeElementsDisplayed; i++) {
   marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
 }
+$(function(){
+  AOS.init({
+     offset: 200,
+     easing: 'ease-in-sine'
+ });
+})
