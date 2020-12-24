@@ -23,9 +23,6 @@ body, html {
   /* scroll-behavior: smooth; */
   height: 100%;
 }
-/* body::-webkit-scrollbar {
-  display: none;
-} */
 .sidenav::-webkit-scrollbar {
   display: none;
 }
@@ -47,7 +44,7 @@ img {
   top: 15px;
   left: 25px;
   background-color: #f0f0f0;
-  padding: 10px;
+  padding: 13px 10px;
   border-radius: 50%;
 }
 .home:hover{
@@ -73,17 +70,25 @@ visibility: hidden;
 transition: 0.5s;
 display: none;
 }
+@media (max-width: 1199.98px) { 
+  .sidenav{
+    height: 100%;
+  }
+}
 .sidenav {
-  height: 100%;
+  
   width: 0; 
   position: fixed; 
   z-index: 3; 
   top: 0;
   left: 0;
   background-color: #111111; 
-  overflow: hidden; 
+  overflow: auto; 
   padding-top: 5px; 
   transition: 0.5s; 
+}
+.sidenav > .row{
+  margin-right: 0 !important;
 }
 .sidenav a {
   padding: 8px 8px 8px 32px;

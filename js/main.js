@@ -53,14 +53,20 @@ window.addEventListener('load', () =>{
 });
 
 
+var body = document.getElementsByTagName("body")[0]; 
 /* Open the sidenav */
 function openNav() {
   document.getElementById("mysidenav").style.width = "100%";
+  document.getElementsByClassName("navcontent")[0].style.display = "block";
+  document.getElementsByClassName("navcontent")[0].style.visibility = "visible";
+  body.style.overflow = "hidden";
 }
 
 /* Close/hide the sidenav */
 function closeNav() {
   document.getElementById("mysidenav").style.width = "0";
+  document.getElementsByClassName("navcontent")[0].style.display = "none";
+  body.style.overflow = "auto";
 }
 
 
